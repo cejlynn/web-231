@@ -3,7 +3,7 @@ body {
   font-family: 'Oswald', Verdana, Arial, sans-serif;
 }
 
-.container {
+#container {
   margin-top: 50px; 
   margin-left: 100px;
   margin-right: 100px;
@@ -12,7 +12,7 @@ body {
   h1, h2, h3, h4 {
     background-color: #3C275A;
     font-family: 'Oswald', Verdana, Arial, sans-serif;
-    font-color: #FFF;
+    color: #FFF;
     border: 1px solid #D6A800;
   }
 
