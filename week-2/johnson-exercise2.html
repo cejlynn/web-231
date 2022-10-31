@@ -1,0 +1,33 @@
+<!--
+title: johnson-exercise2.html
+author: caitlynne johnson
+date: 10/29/2022
+description: html page for exercise 2 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+        <title>WEB 231 – Enterprise JavaScript I</title>
+        </head>
+        <body>
+         
+        <div id="container">
+        <h1>Exercise 2.2 - Hello JavaScript</h1>
+        <button type="button" id="btnMyCourse"> What course am I taking?</button>
+            <p id="txtMyWorld"></p>
+            <a href="https://cejlynn.github.io/web-231/" class="return-home">Return</a>
+        </div>
+        <script>
+            // allows paragraph id to import string value
+            document.getElementById("txtMyWorld").innerHTML = "You are now in Caitlynne Johnson's world!";
+            // click eventlistener to alert for string id "btnMyCourse" button
+            document.getElementById("btnMyCourse").addEventListener("click", function() {
+                alert("WEB 231 - Enterprise JavaScript I.")
+            });
+
+        
+        </script>
+        </body>
+        </html>

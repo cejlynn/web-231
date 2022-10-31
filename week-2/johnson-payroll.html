@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+        <title>WEB 231 – Enterprise JavaScript I</title>
+
+        <!-- links -->
+        <link rel="stylesheet" href="johnson-payroll.css"
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="payroll-header">Payroll System</h1>
+            <h3>Employee Record 1</h3>
+            <ul>
+                <!-- Employee 1 Info-->
+                <li id="txtFirstNameLudwig"></li>
+                <li id="txtLastNameBeethoven"></li>
+                <li id="txtAddressLudwig"></li>
+                <li id="txtHireDateLudgwig"></li>
+                <li id="txtPayRateLudwig"></li>
+            </ul>
+            <h3>Employee Record 2</h3>
+            <ul>
+                <!-- Employee 2 Info-->
+                <li id="txtFirstNameJohann"></li>
+                <li id="txtLastNameBach"></li>
+                <li id="txtAddressJohann"></li>
+                <li id="txtHireDateJohann"></li>
+                <li id="txtPayRateJohann"></li>
+            </ul>
+            <h3>Employee Record 3</h3>
+            <ul>
+                <!-- Employee 3 Info-->
+                <li id="txtFirstNameWolfgang"></li>
+                <li id="txtLastNameMozart"></li>
+                <li id="txtAddressWolfgang"></li>
+                <li id="txtHireDateWolfgang"></li>
+                <li id="txtPayRateWolfgang"></li>
+            </ul>
+            <a href="https://cejlynn.github.io/web-231/" class="return-home">Return</a>
+</div>
+
+<script>
+    /** 
+     defining variables and their values firstName */
+
+     let txtFirstNameLudwig = "Ludwig";
+     let txtFirstNameJohann = "Johann";
+     let txtFirstNameWolfgang = "Wolfgang";
+
+     // lastName variables 
+
+     let txtLastNameBeethoven = "Beethoven";
+     let txtLastNameBach = "Bach";
+     let txtLastNameMozart = "Mozart";
+
+     // address variables 
+     let txtAddressLudwig = "505 Main Street";
+     let txtAddressJohann = "512 Main Street";
+     let txtAddressWolfgang = "600 Main Street";
+
+     /** local date as a string */
+     let txtHireDateLudgwig = new Date().toLocaleDateString("en-US");
+            let txtHireDateJohann = new Date().toLocaleDateString("en-US");
+            let txtHireDateWolfgang = new Date().toLocaleDateString("en-US");
+
+        /** input variables value into html using dom */
+
+        ocument.getElementById("txtFirstNameLudgwig").innerHTML = txtFirstNameLudgwig;
+            document.getElementById("txtFirstNameJohann").innerHTML = txtFirstNameJohann;
+            document.getElementById("txtFirstNameWolfgang").innerHTML = txtFirstNameWolfgang;
+
+            // lastName variables
+            document.getElementById("txtLastNameBeethoven").innerHTML = txtLastNameBeethoven;
+            document.getElementById("txtLastNameBach").innerHTML = txtLastNameBach;
+            document.getElementById("txtLastNameMozart").innerHTML = txtLastNameMozart;
+
+            // address variables
+            document.getElementById("txtAddressLudgwig").innerHTML = txtAddressLudgwig;
+            document.getElementById("txtAddressJohann").innerHTML = txtAddressJohann;
+            document.getElementById("txtAddressWolfgang").innerHTML = txtAddressWolfgang;
+
+            // payRate variables
+            document.getElementById("txtPayRateLudgwig").innerHTML = txtPayRateLudgwig;
+            document.getElementById("txtPayRateJohann").innerHTML = txtPayRateJohann;
+            document.getElementById("txtPayRateWolfgang").innerHTML = txtPayRateWolfgang;
+
+            // hireDate variables
+            document.getElementById("txtHireDateLudgwig").innerHTML = txtHireDateLudgwig;
+            document.getElementById("txtHireDateJohann").innerHTML = txtHireDateJohann;
+            document.getElementById("txtHireDateWolfgang").innerHTML = txtHireDateWolfgang;
+            
+       
+</script>
+</body>
+</html>

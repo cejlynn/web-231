@@ -1,0 +1,12 @@
+<!--
+    title: johnson-exercise2.html
+    author: caitlynne johnson
+    date: 10/29/2022
+    description: css page for johnson-payroll.html
+    -->
+
+    /* border for employee info */
+
+    ul {
+        border: 1px dotted red;
+    }
