@@ -1,0 +1,27 @@
+/*
+========================================== 
+    Assignment Name: 3.2 -Temperature  Conversion App
+    Author: Caitlynne Johnson
+    Date: 11/3/2022
+    Description: Style for Temp conversion app
+==========================================
+*/
+
+body {
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+#conversion-results {
+    text-align: center;
+}
+
+#card-example, #form-example, #form-results-example {
+    width: 600px;
+    margin: 3% auto 00;
+}
+
+#container {
+    padding: 10px;
+}
+
