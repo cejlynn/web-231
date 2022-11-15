@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> WEB 231 - Enterprise JavaScript I</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="global.css">
+        <link rel="stylesheet" type="text/css" href="johnson-number-game.css">
+
+        <!-- 
+            Assignment Name: 4.2 - Number Guessing Game
+            Author: Caitlynne Johnson
+            Date: 11/3/2022
+            Description: Using if...else statements through a simple number guessing game. 
+        -->
+
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="app-header">Welcome To The Numbers Game!</h1>
+            <div id="card-container">
+
+            <div class="card">
+                <div class="card-title">Pick a number between 1 and 10</div>
+                <div class="card-content">
+                <div class="card-form">
+                    <div class="form-field">
+                        <label for="txtFharenheit">Guess the number:</label>
+                        <input type="text" class="input" id="txtFahrenheit" name="myNumber">
+                    </div>
+                    <div class="form-field">
+                        <button class="btn btn-primary full-width" id="btnSubmit">Submit</button>
+                    </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div id="form-results">
+            <div class="card">
+                <div class="card-title">Results</div>
+                <div class="card-content">
+                    <div id="number-results"></div>
+                </div>
+            </div>
+        </div>
+        <a href="https://cejlynn.github.io/web-231/" class="return-home">Return</a>
+
+        <script>
+ // Generate a random number between 1 and 10
+ const rnd = Math.floor((Math.random() * 10) + 1); 
+            
+            // Register onclick event
+            document.getElementById("btnSubmit").onclick = function() {
+
+                // Capture inputted value from txtMyNumber & assign to variable myNumber
+                let myNumber = document.getElementById("txtMyNumber").value;
+
+                // if else if else statement used to display different results of myNumber against const rnd
+                if (myNumber > rnd) {
+                    document.getElementById("number-results").innerHTML = "This number is less than " + myNumber;
+                } else if (myNumber < rnd) {
+                    document.getElementById("number-results").innerHTML = "This number is greater than " + myNumber;
+                } else {
+                    document.getElementById("number-results").innerHTML = "Congratulations! You picked the correct number!";
+                }
+            }
+        </script>
+    </body>
+</html>
+
+        </script>
+    </body>
