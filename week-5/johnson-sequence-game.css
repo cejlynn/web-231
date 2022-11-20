@@ -1,0 +1,27 @@
+/*
+========================================== 
+    Assignment Name: 5.2 - Sequence Game
+    Author: Caitlynne Johnson
+    Date: 11/18/2022
+    Description: Style for Sequence Game
+==========================================
+*/
+
+body {
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+#conversion-results {
+    text-align: center;
+}
+
+#card-example, #form-example, #form-results-example {
+    width: 600px;
+    margin: 3% auto 00;
+}
+
+#container {
+    padding: 10px;
+}
+

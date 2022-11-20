@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> WEB 231 - Enterprise JavaScript I</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="global.css">
+        <link rel="stylesheet" type="text/css" href="johnson-number-game.css">
+
+        <!-- 
+            Assignment Name: 5.2 - Sequence Game
+            Author: Caitlynne Johnson
+            Date: 11/18/2022
+            Description: Using if...else statements through a simple number guessing game. 
+        -->
+    </head>
+    <body>
+        
+        <div id="container">
+<h1 id="app-header">Welcome to the Sequence Game!</h1>
+
+<div id="card-container">
+    <div class="card">
+        <div class="card-title">Sequence Selection Form</div>
+        <div class="card-content">
+            <div class="form">
+
+
+                <div class="form-field">
+                    <label for="sequence">Choose a number sequence:</label>
+                    <select name="drop-down-menu" class="drop-down-menu" id="sequence">
+                        <option value="select">Select</option>
+                        <option value="fibonacci">Fibonacci Sequence</option>
+                        <option value="even">Even Numbers</option>
+                        <option value="odd">Odd Numbers</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <button class="btn btn-primary full-width" id="btnDisplaySequence"> Display Sequence</button>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://cejlynn.github.io/web-231/" class="return-home">Return</a>
+    </div>
+</div>
+
+<script>
+           
+    // Register onclick event
+    document.getElementById("btnDisplaySequence").onclick = function() {
+
+        // Capture inputted value from selection ID & assign to variable choice
+        let choice = document.getElementById("sequence").value;
+
+        // if else if else statement used to display different results of sequence id options
+        if (choice === "fibonacci") {
+            
+            // Variables for while loop
+            let num1 = 0;
+            let num2 = 1; 
+            let next;
+            let fibonacciSequenceText = "";
+
+            // While loop for fibonacci sequence < 40
+            while (num1 < 40) {
+                fibonacciSequenceText = fibonacciSequenceText + num1 + ", ";
+                next = num1 + num2;
+                num1 = num2;
+                num2 = next;
+            }
+
+            // Output test while loop
+            // Expected output 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+            console.log("while - fibonacci - " + fibonacciSequenceText); 
+            // Bind fibonacciSequenceText to sequence-results id
+            document.getElementById("sequence-results").innerHTML = fibonacciSequenceText.slice(0, -2);
+
+        } else if (choice === "even") {
+            
+            // Variables for do...while loop
+            let evenSequenceText = "";
+            let num1 = 0;
+
+            // Do...while loop for even sequence < 20
+            do {
+                num1 = num1 + 2;
+                evenSequenceText = evenSequenceText + num1 + ", ";
+            } while (num1 < 20);
+
+            // Output test do...while loop
+            // Expected output 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+            console.log("do while - even - " + evenSequenceText); 
+            // Bind evenSequenceText to sequence-results id
+            document.getElementById("sequence-results").innerHTML = evenSequenceText.slice(0, -2);
+
+        } else if (choice === "odd") {
+
+            // Variable for for loop
+            let oddSequenceText = "";
+
+            // For loop for odd sequence < 20
+            for (let num1 = 1; num1 < 20; num1 = num1 + 2) {
+                oddSequenceText = oddSequenceText + num1 + ", ";
+            }
+
+            // Output test for loop
+            // Expected output 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
+            console.log("for - odd " + oddSequenceText); 
+            // Bind oddSequenceText to sequence-results id
+            document.getElementById("sequence-results").innerHTML =  oddSequenceText.slice(0, -2);
+
+        } else {
+            
+            // Alert for invalid selection
+            alert("Invalid selection, please try again!");
+
+        }
+    }
+</script>
+</body>
+</html>
