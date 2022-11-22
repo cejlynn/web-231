@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> WEB 231 - Enterprise JavaScript I</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="global.css">
+        <link rel="stylesheet" type="text/css" href="in-n-out-johnson.css">
+
+        <!-- 
+            Assignment Name: 6.2 - In-N-Out-Books
+            Author: Caitlynne Johnson
+            Date: 11/22/2022
+            Description: Experimenting with JavaScript object literals by creating an application called In-N-Out-Books
+        -->
+    </head>
+    <body>
+
+        <div id="container">
+            <h1 id="app-header">Welcome to In-N-Out-Books!</h1>
+            <div id="card-container">
+
+                <div class="card">
+                    <div class="card-title">My Favorites</div>
+                    <div class="card-content">
+                        <div class="form">
+
+
+                            <div class="form-field">
+                                <label for="favoritesList">Pick a listing:</label>
+                                <select name="drop-down-menu" class="drop-down-menu" id="favoriteList">
+                                    <option value="select">Select</option>
+                                    <option value="books">Top 3 Favorite Books</option>
+                                    <option value="authors">Top 3 Favorite Authors</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <button class="btn btn-primary full-width" id="btnDisplayListing">Display Listing</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="favorite-books">
+            <div class="card">
+                <div class="card-title">Top 3 Favorite Books</div>
+                <div class="card-content">
+
+                    <table id="books-table">
+                        <tr>
+                            <th id="txtISBN"></th>
+                            <th id="txtTitle"></th>
+                            <th id="txtPages"></th>
+                        </tr>
+                        <tr>
+                            <td id="txtCruelPrinceISBN"></td>
+                            <td id="txtCruelPrinceTitle"></td>
+                            <td id="txtCruelPrincePages"></td>
+                        </tr>
+                        <tr>
+                            <td id="txtRedQueenISBN"></td>
+                            <td id="txtRedQueenTitle"></td>
+                            <td id="txtRedQueenPages"></td>
+                        </tr>
+                        <tr>
+                            <td id="txtPeopleWeMeetOnVacationISBN"></td>
+                            <td id="txtPeopleWeMeetOnVacationTitle"></td>
+                            <td id="txtPeopleWeMeetOnVacationPages"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="favorite-authors">
+            <div class="card">
+                <div class="card-title">Top 3 Favorite Authors</div>
+                <div class="card-content">
+
+                    <table id="authors-table">
+                        <tr>
+                            <th id="txtName"></th>
+                            <th id="txtGenre"></th>
+                        </tr>
+                        <tr><td id="txtHenryName"></td>
+                        <td id="txtHenryGenre"></td>
+                    </tr>
+                    <tr>
+                        <td id="txtAveyardName"></td>
+                        <td id="txtAveyardGenre"></td>
+                    </tr>
+                    <tr>
+                        <td id="txtBlackName"></td>
+                        <td id="txtBlackGenre"></td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://cejlynn.github.io/web-231/" class="return-home">Return</a>
+
+        <script>
+            const favoriteBook1 = {
+                isbn: "1984806750",
+                title: "People We Meet on Vacation",
+                pages: 373
+
+            }
+
+            const favoriteBook2 = {
+                isbn: "9781409150",
+                title: "Red Queen", 
+                pages: 388
+            }
+
+            const favoriteBook3 = {
+                isbn:"97803163193",
+                title: "The Cruel Prince",
+                pages: 370
+            }
+
+            const favoriteAuthor1 = {
+                name: "Emily Henry",
+                genre: "Romance"
+            }
+
+            const favoriteAuthor2 = {
+                name: "Victoria Aveyard",
+                genre: "Fantasy"
+            }
+
+            const favoriteAuthor3 = {
+                name: "Holly Black",
+                genre: "Fantasy"
+            }
+
+            const tableHeaders = {
+                isbn: "ISBN",
+                title: "Title",
+                pages: "Pages",
+                name: "Name",
+                genre: "Genre"
+            }
+
+            // Bind object literal favoriteBook1 to "favorite-books" table cells
+            document.getElementById("txtPeopleWeMeetOnVacationsISBN").innerHTML = favoriteBook1.isbn;
+            document.getElementById("txtPeopleWeMeetOnVacationTitle").innerHTML = favoriteBook1.title;
+            document.getElementById("txtPeopleWeMeetOnVacationPages").innerHTML = favoriteBook1.pages;
+
+            // Bind object literal favoriteBook2 to "favorite-books" table cells
+            document.getElementById("txtRedQueenISBN").innerHTML = favoriteBook2.isbn;
+            document.getElementById("txtRedQueenTitle").innerHTML = favoriteBook2.title;
+            document.getElementById("txtRedQueenPages").innerHTML = favoriteBook2.pages;
+
+            // Bind object literal favoriteBook2 to "favorite-books" table cells
+            document.getElementById("txtTheCruelPrinceISBN").innerHTML = favoriteBook3.isbn;
+            document.getElementById("txtTheCruelPrinceTitle").innerHTML = favoriteBook3.title;
+            document.getElementById("txtTheCruelPrincePages").innerHTML = favoriteBook3.pages;
+
+
+            // Bind object literal favoriteAuthor1 to "favorite-authors" table cells
+            document.getElementById("txtHenryName").innerHTML = favoriteAuthor1.name;
+            document.getElementById("txtHenryGenre").innerHTML = favoriteAuthor1.genre;
+
+            // Bind object literal favoriteAuthor2 to "favorite-authors" table cells
+            document.getElementById("txtAveyardName").innerHTML = favoriteAuthor2.name;
+            document.getElementById("txtAveyardGenre").innerHTML = favoriteAuthor2.genre;
+
+            // Bind object literal favoriteAuthor3 to "favorite-authors" table cells
+            document.getElementById("txtBlackName").innerHTML = favoriteAuthor3.name;
+            document.getElementById("txtBlackGenre").innerHTML = favoriteAuthor3.genre;
+
+
+            // Bind object literal tableHeaders to both table's th
+            document.getElementById("txtISBN").innerHTML = tableHeaders.isbn;
+            document.getElementById("txtTitle").innerHTML = tableHeaders.title;
+            document.getElementById("txtPages").innerHTML = tableHeaders.pages;
+            document.getElementById("txtName").innerHTML = tableHeaders.name;
+            document.getElementById("txtGenre").innerHTML = tableHeaders.genre;
+
+
+            // Assign variables to divs
+            let books = document.getElementById("favorite-books");
+            let authors = document.getElementById("favorite-authors");
+
+            // Dot notation for styling of books and authors variables
+            books.style.display = "none";
+            authors.style.display = "none";
+            
+
+            // Register onclick event
+            document.getElementById("btnDisplayListing").onclick = function() {
+
+                // Capture inputted value from favoriteList id & assign to variable choice
+                let choice = document.getElementById("favoriteList").value;
+
+                // if else if else statement used to display different results of favoriteList id options
+                if (choice === "books") {
+                    
+                    console.log("else - books"); // test books
+                    books.style.display = "block";
+                    authors.style.display = "none";
+
+                } else if (choice === "authors") {
+                    
+                    console.log("else - authors"); // test authors
+                    books.style.display = "none";
+                    authors.style.display = "block";
+
+                } else if (choice === "select") {
+                
+                    console.log("else - select"); // test select
+                    books.style.display = "none";
+                    authors.style.display = "none";
+
+                }
+            }
+        </script>
+    </body>
+</html>
+    

@@ -1,0 +1,53 @@
+/*
+========================================== 
+    Assignment Name: 6.2 - In-N-Out-Books
+    Author: Caitlynne Johnson
+    Date: 11/22/2022
+    Description: Style for In-N-Out-Books
+==========================================
+*/
+
+body {
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+#form-results {
+    text-align: center;
+}
+
+#container {
+    padding: 10px;
+}
+
+#card-example, #form-example, #form-results-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+th {
+    padding: 12px 0px;
+    text-align: left;
+    background-color: #4f3674;
+    color: white;
+}
+
+td, th {
+    border: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #d6a800;
+    color: #4f3674;
+    cursor: pointer;
+}
+
+th, td {
+    padding: 10px;
+}
