@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> WEB 231 - Enterprise JavaScript I</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="global.css">
+        <link rel="stylesheet" type="text/css" href="johnson-javazon.css">
+        <script src="johnson-javazon.js" async></script>
+
+        <!-- 
+            Assignment Name: 7.2 - Javazon
+            Author: Caitlynne Johnson
+            Date: 12/3/2022
+            Description: Experimenting with JavaScript classes.
+        -->
+
+        
+    </head>
+    <body>
+
+        <div id="container">
+
+            <h1 id="app-header">Welcome to the Javazon App!</h1>
+
+            <!-- Card Container -->
+            <div id="card-container">
+
+                <div class="card">
+                    <div class="card-title">Javazon Selection Form</div>
+                    <div class="card-content">
+                        <div class="form">
+
+                            <!-- Input for Form -->
+                            <div class="form-field">
+                                <label for="txtMySelectList">Choose a listing:</label>
+                                <select name="drop-down-menu" class="drop-down-menu" id="txtMySelectList">
+                                    <option value="select">--Select--</option>
+                                    <option value="products">Products</option>
+                                    <option value="services">Services</option>
+                                    <option value="employees">Employees</option>
+                                </select>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="form-field">
+                                <button class="btn btn-primary full-width" id="btnDisplayListing">Display Listing</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+
+            <!-- Return     Link -->
+            <a href="../index.html" class="return-home">Return</a>
+
+            </div>
+
+            <!-- Card Container for Outputs-->
+            <div id="products">
+                <div class="card">
+                    <div class="card-title">Javazon Products</div>
+                    <div class="card-content">
+                        
+                        <!-- Product Table -->
+                        <table id="products-table">
+                            <tr>
+                                <th id="txtProductIDProductsHeader"></th>
+                                <th id="txtDescriptionProductsHeader"></th>
+                                <th id="txtPriceProductsHeader"></th>
+                                <th id="txtQuantityProductsHeader"></th>
+                                <th id="txtTotalValueProductsHeader"></th>
+                            </tr>
+                            <tr>
+                                <td id="txtProductIDProducts1"></td>
+                                <td id="txtDescriptionProducts1"></td>
+                                <td id="txtPriceProducts1"></td>
+                                <td id="txtQuantityProducts1"></td>
+                                <td id="txtTotalValueProducts1"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtProductIDProducts2"></td>
+                                <td id="txtDescriptionProducts2"></td>
+                                <td id="txtPriceProducts2"></td>
+                                <td id="txtQuantityProducts2"></td>
+                                <td id="txtTotalValueProducts2"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtProductIDProducts3"></td>
+                                <td id="txtDescriptionProducts3"></td>
+                                <td id="txtPriceProducts3"></td>
+                                <td id="txtQuantityProducts3"></td>
+                                <td id="txtTotalValueProducts3"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtProductIDProducts4"></td>
+                                <td id="txtDescriptionProducts4"></td>
+                                <td id="txtPriceProducts4"></td>
+                                <td id="txtQuantityProducts4"></td>
+                                <td id="txtTotalValueProducts4"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtProductIDProducts5"></td>
+                                <td id="txtDescriptionProducts5"></td>
+                                <td id="txtPriceProducts5"></td>
+                                <td id="txtQuantityProducts5"></td>
+                                <td id="txtTotalValueProducts5"></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Container for Services  -->
+            <div id="services">
+                <div class="card">
+                    <div class="card-title">Javazon Services</div>
+                    <div class="card-content">
+                        
+                        <!-- Services Table  -->
+                        <table id="services-table">
+                            <tr>
+                                <th id="txtServiceIDServicesHeader"></th>
+                                <th id="txtDescriptionServicesHeader"></th>
+                                <th id="txtHourlyRateServicesHeader"></th>
+                                <th id="txtMinServicesHeader"></th>
+                            </tr>
+                            <tr>
+                                <td id="txtServiceIDServices1"></td>
+                                <td id="txtDescriptionServices1"></td>
+                                <td id="txtHourlyRateServices1"></td>
+                                <td id="txtMinServices1"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtServiceIDServices2"></td>
+                                <td id="txtDescriptionServices2"></td>
+                                <td id="txtHourlyRateServices2"></td>
+                                <td id="txtMinServices2"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtServiceIDServices3"></td>
+                                <td id="txtDescriptionServices3"></td>
+                                <td id="txtHourlyRateServices3"></td>
+                                <td id="txtMinServices3"></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Container for Employees -->
+            <div id="employees">
+                <div class="card">
+                    <div class="card-title">Javazon Employees</div>
+                    <div class="card-content">
+                        
+                        <!-- Employees Table -->
+                        <table id="employees-table">
+                            <tr>
+                                <th id="txtEmployeeIDEmployeesHeader"></th>
+                                <th id="txtLastNameEmployeesHeader"></th>
+                                <th id="txtFirstNameEmployeesHeader"></th>
+                                <th id="txtSalaryEmployeesHeader"></th>
+                            </tr>
+                            <tr>
+                                <td id="txtEmployeeIDEmployees1"></td>
+                                <td id="txtLastNameEmployees1"></td>
+                                <td id="txtFirstNameEmployees1"></td>
+                                <td id="txtSalaryEmployees1"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtEmployeeIDEmployees2"></td>
+                                <td id="txtLastNameEmployees2"></td>
+                                <td id="txtFirstNameEmployees2"></td>
+                                <td id="txtSalaryEmployees2"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtEmployeeIDEmployees3"></td>
+                                <td id="txtLastNameEmployees3"></td>
+                                <td id="txtFirstNameEmployees3"></td>
+                                <td id="txtSalaryEmployees3"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtEmployeeIDEmployees4"></td>
+                                <td id="txtLastNameEmployees4"></td>
+                                <td id="txtFirstNameEmployees4"></td>
+                                <td id="txtSalaryEmployees4"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtEmployeeIDEmployees5"></td>
+                                <td id="txtLastNameEmployees5"></td>
+                                <td id="txtFirstNameEmployees5"></td>
+                                <td id="txtSalaryEmployees5"></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
