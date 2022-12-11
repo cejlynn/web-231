@@ -1,0 +1,30 @@
+/*
+========================================== 
+    Assignment Name: 8.2 - Alphabet Game
+    Author: Caitlynne Johnson
+    Date: 12/10/2022
+    Description: Style for Alphabet Game
+==========================================
+*/
+body {
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+#form-results {
+    text-align: center;
+}
+
+#container {
+    padding: 10px;
+}
+
+#card-example, #form-example, #form-results-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+#alphabet-results, #alphabet-letter {
+    text-align: center;
+    font-size: 28px;
+}
