@@ -1,0 +1,37 @@
+/*
+========================================== 
+    Assignment Name: 9.2 - Card Game
+    Author: Caitlynne Johnson
+    Date: 12/15/2022
+    Description: Style for Card Game
+==========================================
+*/
+
+body {
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+#form-results {
+    text-align: center;
+}
+
+#container {
+    padding: 10px;
+}
+
+#card-example, #form-example, #form-results-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+.player-card {
+    text-align: center;
+}
+
+#player-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    grid-gap: 10px;
+}

@@ -1,0 +1,57 @@
+ <!-- 
+            Assignment Name: 9.2 - Card Game
+            Author: Caitlynne Johnson
+            Date: 12/15/2022
+            Description: Card Game with Functions
+        -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> WEB 231 - Enterprise JavaScript I</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="global.css">
+        <link rel="stylesheet" type="text/css" href="johnson-card-game.css">
+        <script src="johnson-card-game.js" async></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+
+        <div id="container">
+            <h1 id="app-header">Welcome to the Card Game!</h1>
+
+            <!-- card container for user input -->
+            <div id="card-container">
+                <div class="card">
+                    <div class="card-title">Card Dealer</div>
+                    <div class="card-content">
+                        <!-- button -->
+                        <div class="form-field">
+                            <button class="btn btn-primary full-width" id="btnDealCards">Deal Cards</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- return link -->
+        <a href="https://cejlynn.github.io/web-231/" class="return-home">Return</a>
+
+        <div id="button-results">
+            <div class="card">
+                <div class="card-title">Shuffled Cards</div>
+                <div class="card-content">
+                    <!-- cards -->
+                    <div id="player-card-container"></div>
+                </div>
+            </div>
+        </div>
+        </body>
+        </html>
+        
